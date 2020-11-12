@@ -74,7 +74,8 @@ def index1():
     my_str = "Всем привет"
     my_list = [1, 3, 5]
     # print("".join(map(getitem, [my_str]*len(my_list), my_list)))
-    print("".join(map(getitem, repeat(my_list,len(my_list)), my_list)))
+    print("".join(map(getitem, repeat(my_str, len(my_list)), my_list)))
+
 
 if __name__ == '__main__':
     # map2()
