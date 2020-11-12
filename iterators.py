@@ -1,4 +1,7 @@
-from itertools import count
+from operator import add, index
+
+# https://www.notion.so/Map-864870a4d8cf4611a32a240f62042f2b
+
 
 def map2():
     num_list = [
@@ -10,6 +13,7 @@ def map2():
         0b1010101010
     ]
     print(list(map(int, num_list)))
+
 
 def map3():
     my_floats = [
@@ -43,7 +47,30 @@ def map4():
     print(list(map(str.upper, list_words)))
 
 
+def map5():
+    list1 = [1, 2, 3]
+    list2 = [4, 5, 6]
+
+    print(list(map(add, list1, list2)))   # из библиотеки operator
+    # если списки разной длины, map отработает столько раз сколько элементов в более коротком списке и ошибки не будет
+
+
+def map6():
+    hnrrrg = [
+        [2, 3, 5, 7],
+        [11, 13, 17, 19],
+        [23, 29],
+        [31, 37]
+    ]
+
+    # print(list(map(len, hnrrrg)))         # Найти длину каждой последовательностей
+    # print(sum(map(len, hnrrrg)))          # Найти общее количество элементов в списке
+    print(max(map(len, hnrrrg)))            # Найти размер максимальной последовательности
+
+
 if __name__ == '__main__':
     # map2()
     # map3()
-    map4()
+    # map4()
+    # map5()
+    map6()
