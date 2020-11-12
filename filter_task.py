@@ -74,8 +74,26 @@ def zip_1():
 def enumerate_2(sequence):
     return zip(range(len(sequence)), sequence)
 
+
+def parse_matrix():
+    matrix = """
+        1 2 3
+        4 5 6
+        7 8 9
+        10 11 12
+    """
+
+    matrix = matrix.strip()
+    matrix = matrix.split('\n')
+    matrix = list(map(str.strip, matrix))
+    matrix = list(map(str.split, matrix))
+    matrix = [list(map(int, sublist)) for sublist in matrix]
+    print(matrix)
+
+
 if __name__ == '__main__':
     # filter_1()
     # filter_2()
     # zip_1()
-    print(list(enumerate_2("Хурма")))
+    # print(list(enumerate_2("Хурма")))
+    parse_matrix()
