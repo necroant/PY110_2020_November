@@ -1,4 +1,4 @@
-from itertools import count
+from itertools import count, zip_longest
 from random import randint
 
 
@@ -43,6 +43,35 @@ def filter_2():
     print(list(filter(f1, random_list)))
 
 
+def zip_1():
+    figures = [
+        "круг",
+        "квадрат",
+        "ромб",
+        "жо"
+    ]
+
+    colors = [
+        "красный",
+        "белый",
+        "коричневый"
+    ]
+
+    # for figure, color in zip(figures, colors):
+    #     print(f"{figure} цвета {color}")
+
+    """
+    если один из списков длиннее другого действует тот же принцип что и с map, не нравится - в библиотеке itertools
+    есть функция zip_longest() :
+    """
+
+    default_color = "малиновый"
+
+    for figure, color in zip_longest(figures, colors, fillvalue=default_color):
+        print(f"{figure} цвета {color}")
+
+
 if __name__ == '__main__':
     # filter_1()
-    filter_2()
+    # filter_2()
+    zip_1()
