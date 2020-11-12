@@ -71,7 +71,11 @@ def zip_1():
         print(f"{figure} цвета {color}")
 
 
+def enumerate_2(sequence):
+    return zip(range(len(sequence)),sequence)
+
 if __name__ == '__main__':
     # filter_1()
     # filter_2()
-    zip_1()
+    # zip_1()
+    print(list(enumerate_2("Хурма")))
