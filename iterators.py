@@ -22,12 +22,28 @@ def map3():
         4.595235346645
     ]
 
-    print(list(map(round_, my_floats)))
+    # print(list(map(round_, my_floats)))                       # встроенный round
+    print(list(map(round, my_floats, [2]*len(my_floats))))      # самописный round
 
 
 def round_(a, n=2):
-    return round(a,n)
+    return round(a, n)
+
+
+def map4():
+    list_words = [
+        "Goldenrod",
+        "Purple",
+        "Salmon",
+        "Turquoise",
+        "Cyan"
+    ]
+
+    # print(list(map(len, list_words)))
+    print(list(map(str.upper, list_words)))
+
 
 if __name__ == '__main__':
     # map2()
-    map3()
+    # map3()
+    map4()
