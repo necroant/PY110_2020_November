@@ -72,7 +72,7 @@ def zip_1():
 
 
 def enumerate_2(sequence):
-    return zip(range(len(sequence)),sequence)
+    return zip(range(len(sequence)), sequence)
 
 if __name__ == '__main__':
     # filter_1()
