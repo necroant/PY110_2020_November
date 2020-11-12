@@ -1,4 +1,6 @@
-from operator import add, index
+from operator import add, getitem
+from itertools import repeat
+
 
 # https://www.notion.so/Map-864870a4d8cf4611a32a240f62042f2b
 
@@ -68,9 +70,16 @@ def map6():
     print(max(map(len, hnrrrg)))            # Найти размер максимальной последовательности
 
 
+def index1():
+    my_str = "Всем привет"
+    my_list = [1, 3, 5]
+    # print("".join(map(getitem, [my_str]*len(my_list), my_list)))
+    print("".join(map(getitem, repeat(my_list,len(my_list)), my_list)))
+
 if __name__ == '__main__':
     # map2()
     # map3()
     # map4()
     # map5()
-    map6()
+    # map6()
+    index1()
